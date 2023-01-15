@@ -1,0 +1,159 @@
+:root{
+    --bg-color: hsl(229, 57%, 11%);
+    --main-color:hsl(228, 56%, 26%);
+}
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+    background-color: var(--bg-color) ;
+}
+main{
+    width: 58em;
+   display: grid;
+   place-items: end;
+   gap: 1rem;
+   grid-template-columns: 1fr 2fr;
+   grid-template-rows: 1fr;
+}
+@media(max-width:375px){
+    body{
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+    }
+    main{
+        grid-template-columns: 1fr;
+        place-content: center;
+        
+    }
+    main section:nth-child(2) div.note::after{
+        display: none;
+    }
+    main section:nth-child(2) div.note{
+        transform: translate(-64%, 245%);
+    }
+   main section:nth-child(2){
+    width: 90%;
+   }
+   main section:nth-child(2) .load .progress span{
+   transform: translate(-48% ,-5%);
+   }
+}
+main section:first-child{
+    background-color:var(--main-color);
+    width: 100%;
+    height: 12em;
+   padding: 2rem;
+   border-radius: 1rem 5rem 1rem 1rem;
+}
+main section div.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 11em;
+}
+
+main section div.icons .icon{
+    width: 3em;
+    background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height :3em ;
+  border-radius: 18%;
+}
+
+main section:nth-child(2){
+    width: 100%;
+
+    height: 9em;
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    position: relative;
+
+}
+main section:nth-child(2) p{
+    color: hsl(229, 7%, 55%) ;
+}
+main section:nth-child(2) p span{
+    color: hsl(243, 100%, 93%) ;
+}
+main section:nth-child(2) .load{
+    background-color: var(--bg-color);
+    height: 1em;
+    border-radius: 1rem;
+}
+main section:nth-child(2) .load .progress{
+    height: 1em;
+    background:linear-gradient( 90deg,hsl(6, 100%, 80%) 70%, hsl(335, 100%, 65%));
+    width: 70%;
+    border-radius: 1em;
+}
+main section:nth-child(2) .load .progress .ball-progress{
+   height: 1em;
+width:100%;
+display: flex;
+justify-content: end;
+align-items: center;
+}
+main section:nth-child(2) .load .progress span{
+    border: 6px solid white;
+    border-radius: 50%;
+}
+main section:nth-child(2) div.gb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: hsl(243, 100%, 93%)  ;
+}
+main section:nth-child(2) div.note{
+    background-color: white;
+    width: 11em;
+    position: absolute;
+    top: -30%;
+    left: 57%;
+    height: 4em;
+    border-radius: 1em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+main section:nth-child(2) div.note span{
+    font-weight: 700;
+    font-size: 30px;
+}
+main section:nth-child(2) div.note::after{
+    content: "";
+    position: absolute;
+    top: 68%;
+    right: 0%;
+    border: 20px solid;
+    border-color: transparent white transparent transparent;
+}
+
+
+
+main section:nth-child(2) div.note span{
+    font-size: 30px;
+    color: black;
+    margin-right: 10px;
+}
+main section:nth-child(2) div.note{
+    color: hsl(229, 7%, 55%) ;
+}
